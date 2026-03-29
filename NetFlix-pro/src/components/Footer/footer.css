@@ -1,0 +1,118 @@
+/* footer.css – Netflix style footer */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.footer_outer_container {
+  background-color: #0a0a0a;   /* Netflix dark background */
+  width: 100%;
+  padding: 40px 0 30px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: auto;            /* sticks to bottom if used in flex layout */
+}
+
+.footer_inner_container {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Social icons row */
+.footer_icon ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding-left: 0;
+}
+
+.footer_icon li {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.footer_icon li svg {
+  font-size: 28px;
+  fill: #e5e5e5;
+  transition: fill 0.2s ease;
+}
+
+.footer_icon li:hover svg {
+  fill: #b3b3b3;
+}
+
+.footer_icon li:hover {
+  transform: scale(1.05);
+}
+
+/* Footer data links (two columns) */
+.footer_data {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer_data div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 150px;
+}
+
+.footer_data li {
+  list-style: none;
+  color: #808080;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.footer_data li:hover {
+  color: #e5e5e5;
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer_inner_container {
+    max-width: 90%;
+  }
+
+  .footer_data {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer_data div {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .footer_icon ul {
+    gap: 15px;
+  }
+
+  .footer_icon li svg {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer_outer_container {
+    padding: 30px 0 20px;
+  }
+
+  .footer_data li {
+    font-size: 11px;
+  }
+
+  .footer_data div {
+    gap: 15px;
+  }
+}

@@ -1,0 +1,129 @@
+/* header.css – Netflix style with logo image focus */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fixed header with dark Netflix background */
+.header_custom_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0a0a0a;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
+}
+
+.header_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4%;
+  height: 68px;
+  max-width: 100%;
+}
+
+/* Left and right navigation lists */
+.header_left ul,
+.header_right ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+}
+
+/* Text links styling */
+.header_left li:not(:first-child),
+.header_right li {
+  color: #e5e5e5;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.header_left li:not(:first-child):hover,
+.header_right li:hover {
+  color: #b3b3b3;
+}
+
+/* ========== NETFLIX LOGO IMAGE STYLES ========== */
+.header_left li:first-child {
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+.header_left li:first-child img {
+  height: 60px;          /* Netflix logo typical height */
+  width: auto;           /* maintain aspect ratio */
+  object-fit: contain;
+  display: block;
+}
+
+/* Optional: adjust logo size on smaller screens */
+@media (max-width: 768px) {
+  .header_left li:first-child img {
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header_left li:first-child img {
+    height: 30px;
+  }
+}
+/* ============================================= */
+
+/* Icons styling */
+.header_right li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header_right li svg {
+  font-size: 24px;
+  fill: #e5e5e5;
+  transition: fill 0.2s ease;
+}
+
+.header_right li:hover svg {
+  fill: #b3b3b3;
+}
+
+/* Responsive: hide some text links on smaller screens */
+@media (max-width: 768px) {
+  .header_container {
+    padding: 0 20px;
+  }
+
+  .header_left ul {
+    gap: 12px;
+  }
+
+  /* Hide 'Latest' and 'Browse by Languages' on mobile */
+  .header_left li:nth-child(6),
+  .header_left li:nth-child(7),
+  .header_left li:nth-child(8)   {
+    display: none;
+  }
+
+  .header_right ul {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header_left li:nth-child(3),
+  .header_left li:nth-child(4),
+    .header_left li:nth-child(5){
+    display: none;
+  }
+}
