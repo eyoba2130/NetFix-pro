@@ -7,10 +7,10 @@
 }
 
 .footer_outer_container {
-  background-color: #0a0a0a;   /* Netflix dark background */
+  /* background-color: #0a0a0a;    */
   width: 100%;
   padding: 40px 0 30px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  /* border-top: 1px solid rgba(255, 255, 255, 0.1); */
   margin-top: auto;            /* sticks to bottom if used in flex layout */
 }
 
