@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./banner.css"
 import axios from "../../utils/axios.jsx";
-import requests from "../../utils/Request";
+import requests from "../../utils/Requests";
 const Banner = () => {
 	const [movie, setMovie] = useState([]);
-	console.log("የእኔ API Key:", import.meta.env.VITE_API_KEY);
+	console.log("my API Key:", import.meta.env.VITE_API_KEY);
 	useEffect(() => {
 		async function fetchData() {
 			const request = await axios.get(requests.fetchNetflixOriginals);

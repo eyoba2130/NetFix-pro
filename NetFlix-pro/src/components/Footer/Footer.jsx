@@ -3,16 +3,17 @@ import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import "./footer.css";
-function Footer() {
+
+export default function Footer() {
   return (
     <>
       <div className="footer_outer_container">
         <div className="footer_inner_container">
           <div className="footer_icon">
             <ul>
-            <li><FacebookOutlinedIcon/></li>
-            <li><InstagramIcon/></li>
-            <li><YouTubeIcon/></li>
+            <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><FacebookOutlinedIcon/></a></li>
+            <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><InstagramIcon/></a></li>
+            <li><a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><YouTubeIcon/></a></li>
             </ul>
           </div>
           <div className="footer_data">
@@ -54,5 +55,3 @@ function Footer() {
     </>
   )
 }
-
-export default Footer

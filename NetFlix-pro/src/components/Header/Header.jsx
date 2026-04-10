@@ -15,11 +15,11 @@ function Header() {
             <ul>
               <li><img src={Netflix_logo} /></li>
               <li>Home</li>
-              <li>TvShows</li>
+              <li>Tv</li>
               <li>Movies</li>
-              <li>My List</li>
+              <li>MyList</li>
               <li>Latest</li>
-              <li>Browser by Languges</li>
+              {/* <li>Browser by Languages</li> */}
             </ul>
           </div>
           <div className="header_right">

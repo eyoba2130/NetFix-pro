@@ -1,0 +1,73 @@
+/* Row.css */
+
+.row {
+  margin-left: 20px;
+  color: white;
+}
+
+.row h1 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.row__posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px 0 20px 0;
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.row__posters::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.row__posters {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.row__poster {
+  object-fit: contain;
+  width: 100%;
+  max-height: 120px;
+  margin-right: 10px;
+  transition: transform 450ms;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.row__poster:hover {
+  transform: scale(1.08);
+}
+
+.row__posterLarge {
+  max-height: 280px;
+}
+
+.row__posterLarge:hover {
+  transform: scale(1.09);
+}
+
+/* Optional: YouTube trailer container */
+.row > div:last-child {
+  padding: 40px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .row h1 {
+    font-size: 1.2rem;
+  }
+
+  .row__poster {
+    max-height: 100px;
+  }
+
+  .row__posterLarge {
+    max-height: 200px;
+  }
+}
